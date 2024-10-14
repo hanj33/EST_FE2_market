@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>호두마켓</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="mainHodu">
+        <h1>
+          <a href="index.html">
+            <img src="assets/Logo-hodu.png" alt="호두마켓" />
+          </a>
+        </h1>
+        <form>
+          <input type="text" placeholder="상품을 검색해보세요!" />
+          <button>
+            <img src="./assets/search.svg" alt="입력한 상품으로 검색" />
+          </button>
+        </form>
+      </div>
+      <ul class="userCartLogin">
+        <li>
+          <a href="cart.html" class="cart">
+            <img src="assets/icon-shopping-cart.svg" alt="장바구니" /> 장바구니
+          </a>
+        </li>
+        <li>
+          <a href="login.html" class="login">
+            <img src="assets/icon-user.svg" alt="로그인" /> 로그인
+          </a>
+        </li>
+      </ul>
+    </header>
+
+    <main>
+      <section class="imageSlideContainer">
+        <h2 class="sr-only">메인이미지</h2>
+        <button class="slideArrowLeft">
+          <img src="./assets/icon-swiper-1.svg" alt="왼쪽으로 넘기기" />
+        </button>
+        <div class="imageSlide">
+          <ul class="imageSlideImg">
+            <!-- 사진크기 다름: 이미지 전환 확인용 -->
+            <li>
+              <img src="https://via.placeholder.com/1920x450" alt="" />
+            </li>
+            <li>
+              <img src="https://via.placeholder.com/1920x460" alt="" />
+            </li>
+            <li>
+              <img src="https://via.placeholder.com/1920x470" alt="" />
+            </li>
+            <li>
+              <img src="https://via.placeholder.com/1920x480" alt="" />
+            </li>
+            <li>
+              <img src="https://via.placeholder.com/1920x500" alt="" />
+            </li>
+          </ul>
+          <ul class="imageSlideBar">
+            <li>
+              <button class="imageSlideBarBtn SlideBarBtn1"></button>
+            </li>
+            <li>
+              <button class="imageSlideBarBtn SlideBarBtn2"></button>
+            </li>
+            <li>
+              <button class="imageSlideBarBtn SlideBarBtn3"></button>
+            </li>
+            <li>
+              <button class="imageSlideBarBtn SlideBarBtn4"></button>
+            </li>
+            <li>
+              <button class="imageSlideBarBtn SlideBarBtn5"></button>
+            </li>
+          </ul>
+        </div>
+        <button class="slideArrowRight">
+          <img src="./assets/icon-swiper-2.svg" alt="오른쪽으로 넘기기" />
+        </button>
+      </section>
+
+      <section class="item">
+        <a href="detail.html" class="itemProduct">
+          <img
+            src="https://via.placeholder.com/380"
+            alt="상품이미지"
+            class="itemImage"
+          />
+          <span class="itemCategory">우당탕탕 라이캣의 실험실</span>
+          <h2 class="itemTitle">Hack Your Life 개발자 노트북 파우치</h2>
+          <p class="price"><span class="priceNum">29,000원</span></p>
+        </a>
+        <a href="detail.html" class="itemProduct">
+          <img
+            src="https://via.placeholder.com/380"
+            alt="상품이미지"
+            class="itemImage"
+          />
+          <span class="itemCategory">제주코딩베이스캠프</span>
+          <h2 class="itemTitle">네 개발잡니다 개발자키링 금속키링</h2>
+          <p class="price"><span class="priceNum">29,000</span>원</p>
+        </a>
+        <a href="detail.html" class="itemProduct">
+          <img
+            src="https://via.placeholder.com/380"
+            alt="상품이미지"
+            class="itemImage"
+          />
+          <span class="itemCategory">백엔드글로벌</span>
+          <h2 class="itemTitle">딥러닝 개발자 무릎 담요</h2>
+          <p class="price"><span class="priceNum">29,000</span>원</p>
+        </a>
+        <a href="detail.html" class="itemProduct">
+          <img
+            src="https://via.placeholder.com/380"
+            alt="상품이미지"
+            class="itemImage"
+          />
+          <span class="itemCategory">코딩엔유</span>
+          <h2 class="itemTitle">우당탕탕 라이캣의 실험실 스티커 팩</h2>
+          <p class="price"><span class="priceNum">29,000</span>원</p>
+        </a>
+        <a href="detail.html" class="itemProduct">
+          <img
+            src="https://via.placeholder.com/380"
+            alt="상품이미지"
+            class="itemImage"
+          />
+          <span class="itemCategory">파이썬스쿨</span>
+          <h2 class="itemTitle">
+            버그를 Java라 버그잡는 개리씨 키링 개발자키링...
+          </h2>
+          <p class="price"><span class="priceNum">29,000</span>원</p>
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footerTop">
+        <nav>
+          <ul class="hoduTerms">
+            <li><a href="index.html">호두샵 소개</a></li>
+            <li><a href="index.html">이용약관</a></li>
+            <li>
+              <a href="index.html"><strong>개인정보처리방침</strong></a>
+            </li>
+            <li><a href="index.html">전자금융거래약관</a></li>
+            <li><a href="index.html">청소년보호정책</a></li>
+            <li><a href="index.html">제휴문의</a></li>
+          </ul>
+        </nav>
+        <div class="snsList">
+          <a href="https://www.instagram.com/">
+            <img src="./assets/icon-insta.svg" alt="인스타그램으로 이동" />
+          </a>
+          <a href="https://www.facebook.com/">
+            <img src="./assets/icon-fb.svg" alt="페이스북으로 이동" />
+          </a>
+          <a href="https://www.youtube.com">
+            <img src="./assets/icon-yt.svg" alt="유튜브로 이동" />
+          </a>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="business">
+        <p>
+          <strong>(주)HODU SHOP</strong> <br />
+          제주특별자치도 제주시 동광고 137 제주코딩베이스캠프 <br />
+          사업자 번호 : 000-0000-0000 | 통신판매업
+          <br />
+          대표 : 김호두
+        </p>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

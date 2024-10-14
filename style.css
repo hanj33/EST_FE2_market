@@ -1,0 +1,261 @@
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 폰트 확인용 임시폰트 */
+@font-face {
+  font-family: "RiaSans-ExtraBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/RiaSans-ExtraBold.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 10px;
+  font-family: "SpoqaHanSansNeo-Regular";
+}
+:root {
+  --main-color: #21bf48;
+  --sub-color: #767676;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+
+  padding: 2rem 32rem;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: 0 0.4rem 0.5rem 0 rgba(0, 0, 0, 0.1);
+
+  z-index: 100;
+}
+
+header > * {
+  max-width: 66.7%;
+}
+
+.mainHodu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+h1 img {
+  width: 12.4rem;
+}
+
+header form {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+header form input {
+  border: 2px solid var(--main-color);
+  border-radius: 5rem;
+  width: 40rem;
+  height: 4.6rem;
+  padding-left: 2.2rem;
+  box-sizing: border-box;
+}
+header form input::placeholder {
+  font-family: "SpoqaHanSansNeo-Regular";
+}
+header form button {
+  position: absolute;
+  left: 35rem;
+}
+
+.userCartLogin {
+  display: flex;
+  gap: 2.6rem;
+}
+.userCartLogin li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: var(--sub-color);
+  gap: 0.4rem;
+
+  font-size: 1.2rem;
+}
+
+/* =========================================================== */
+/* =============================메인============================ */
+/* =========================================================== */
+
+main {
+  position: relative;
+  padding-top: 9rem;
+  padding-bottom: 18rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.imageSlideContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  width: 100%;
+  height: 50rem;
+  background-color: #f2f2f2;
+}
+.slideArrowLeft {
+  position: absolute;
+  left: 3rem;
+  z-index: 50;
+}
+
+.imageSlide li img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.imageSlideBar {
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  gap: 0.6rem;
+  position: absolute;
+  bottom: 2rem;
+}
+.imageSlideBar li {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: white;
+
+  z-index: 50;
+}
+.imageSlideBar li button {
+  height: 1rem;
+}
+
+.slideArrowRight {
+  position: absolute;
+  right: 3rem;
+  z-index: 50;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 7rem 7.8rem;
+  padding-top: 8rem;
+  max-width: 66.7%;
+}
+.itemProduct {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.itemImage {
+  border-radius: 1rem;
+  padding-bottom: 0.6rem;
+}
+.itemCategory {
+  display: block;
+  color: var(--sub-color);
+  font-size: 1.6rem;
+}
+.itemTitle {
+  font-size: 1.8rem;
+  color: black;
+}
+.price {
+  font-size: 1.6rem;
+  color: black;
+}
+.priceNum {
+  font-weight: bold;
+  font-size: 2.4rem;
+  padding-right: 0.2rem;
+}
+
+/* =========================================================== */
+/* =============================푸터============================ */
+/* =========================================================== */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
+
+  position: relative;
+
+  padding: 6rem 32rem;
+
+  width: 100%;
+  height: 29.8rem;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
+
+footer > * {
+  max-width: 66.7vw;
+}
+
+.footerTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hoduTerms {
+  display: flex;
+  gap: 3.2rem;
+  font-size: 1.4rem;
+  color: black;
+}
+.hoduTerms li a {
+  color: black;
+}
+.hoduTerms li:not(:last-child)::after {
+  content: "|";
+  color: black;
+  position: relative;
+  left: 1.6rem;
+}
+strong {
+  font-weight: bold;
+}
+.snsList {
+  position: relative;
+  right: 0;
+  display: flex;
+  gap: 1.4rem;
+}
+.line {
+  border: 1px solid #c4c4c4;
+  width: 100%;
+  /* margin: 3rem; */
+}
+
+footer .business {
+  display: flex;
+  color: var(--sub-color);
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  position: relative;
+  left: 0;
+}
