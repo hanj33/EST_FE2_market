@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>호두마켓 | 로그인</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="./css/style-user.css" />
+  </head>
+  <body>
+    <h1>
+      <img src="assets/Logo-hodu.png" alt="호두마켓" />
+    </h1>
+    <section class="login">
+      <div class="loginSelect">
+        <button class="loginBuyer selectedBtn">구매회원 로그인</button>
+        <button class="loginSeller">판매회원 로그인</button>
+      </div>
+
+      <form class="loginInput">
+        <label for="userID" class="sr-only">아이디</label>
+        <input type="text" id="userID" placeholder="아이디" required />
+        <label for="userPW" class="sr-only">아이디</label>
+        <input type="password" id="userPW" placeholder="비밀번호" required />
+
+        <button type="submit">로그인</button>
+      </form>
+    </section>
+
+    <section class="userHelp">
+      <a href="join.html">회원가입</a>
+      <a href="page404.html">비밀번호 찾기</a>
+    </section>
+  </body>
+</html>

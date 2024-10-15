@@ -1,0 +1,343 @@
+@font-face {
+  font-family: "SpoqaHanSansNeo-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 폰트 확인용 임시폰트 */
+@font-face {
+  font-family: "RiaSans-ExtraBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/RiaSans-ExtraBold.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 10px;
+  font-family: "SpoqaHanSansNeo-Regular";
+}
+:root {
+  --main-color: #21bf48;
+  --sub-color: #767676;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+
+  padding: 2rem 32rem;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: 0 0.4rem 0.5rem 0 rgba(0, 0, 0, 0.1);
+
+  z-index: 100;
+}
+
+header > * {
+  max-width: 66.7%;
+}
+
+.mainHodu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+h1 img {
+  width: 12.4rem;
+}
+
+header form {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+header form input {
+  border: 2px solid var(--main-color);
+  border-radius: 5rem;
+  width: 40rem;
+  height: 4.6rem;
+  padding-left: 2.2rem;
+  box-sizing: border-box;
+}
+header form input::placeholder {
+  font-family: "SpoqaHanSansNeo-Regular";
+}
+header form button {
+  position: absolute;
+  left: 35rem;
+}
+
+.userCartLogin {
+  display: flex;
+  gap: 2.6rem;
+}
+.userCartLogin li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: var(--sub-color);
+  gap: 0.4rem;
+
+  font-size: 1.2rem;
+}
+
+/* =========================================================== */
+/* =============================메인============================ */
+/* =========================================================== */
+
+main {
+  position: relative;
+  padding-top: 17rem;
+  padding-bottom: 18rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.buyProduct {
+  display: grid;
+  grid-template-columns: 60rem 1fr;
+  gap: 5rem;
+  max-width: 67%;
+}
+.itemImage {
+  width: 60rem;
+  height: 60rem;
+
+  float: left;
+}
+.buyProduct span {
+  color: var(--sub-color);
+  font-size: 1.8rem;
+}
+.buyProduct h2 {
+  font-size: 3.6rem;
+
+  padding-top: 1.6rem;
+  padding-bottom: 2rem;
+}
+.buyProduct .priceNum {
+  font-size: 3.6rem;
+  font-weight: bold;
+  color: black;
+
+  padding-right: 0.2rem;
+}
+.buyProduct .price {
+  font-size: 1.8rem;
+
+  padding-bottom: 13.8rem;
+}
+.buyProduct .delivery {
+  font-size: 1.6rem;
+}
+
+.buyProduct .line {
+  margin-top: 2rem;
+}
+
+.productCount {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  width: 15rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 0.5rem;
+
+  box-shadow: 0 0 0 1px #c4c4c4;
+}
+.productCount input {
+  border: inherit;
+
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  font-size: 1.8rem;
+
+  box-shadow: 0 0 0 1px #c4c4c4 inset;
+}
+.buyProduct input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.productCount button {
+  width: 5rem;
+  height: 5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.productCount button img {
+  margin: auto;
+}
+
+.buyProduct section {
+  display: flex;
+  padding-top: 4.6rem;
+  align-items: center;
+
+  padding-bottom: 3rem;
+}
+.buyProduct section h2 {
+  font-size: 1.8rem;
+  padding: 0;
+}
+.buyProduct .totalCount {
+  color: var(--sub-color);
+  font-size: 1.8rem;
+  padding-left: 26rem;
+
+  padding-right: 2.8rem;
+}
+.buyProduct .totalCountNum {
+  color: var(--main-color);
+  font-weight: bold;
+}
+.buyProduct .totalCount::after {
+  content: "|";
+  position: relative;
+  left: 1.1rem;
+}
+.buyProduct section p {
+  font-size: 1.8rem;
+  color: var(--main-color);
+  position: relative;
+  bottom: 0.3rem;
+}
+.buyProduct .totalPrice {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 3.6rem;
+
+  padding-right: 0.2rem;
+}
+
+.buyItBtn {
+  background-color: var(--main-color);
+  width: 41.6rem;
+  height: 6rem;
+
+  border-radius: 0.5rem;
+
+  margin-right: 1.4rem;
+}
+.buyItBtn,
+.goToCart {
+  color: white;
+  font-size: 1.8rem;
+}
+.goToCart {
+  background-color: var(--sub-color);
+  width: 20rem;
+  height: 6rem;
+  border-radius: 0.5rem;
+}
+
+.productDetail {
+  padding-top: 14rem;
+  display: flex;
+
+  padding-bottom: 36rem;
+}
+.productDetail button {
+  width: 32rem;
+  height: 6rem;
+  font-size: 1.8rem;
+}
+.productDetail button.activeBtn {
+  color: var(--main-color);
+  font-weight: bold;
+  border-bottom: 0.6rem solid var(--main-color);
+}
+.productDetail button.disabledBtn {
+  color: var(--sub-color);
+  border-bottom: 0.6rem solid #e0e0e0;
+}
+
+/* =========================================================== */
+/* =============================푸터============================ */
+/* =========================================================== */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
+
+  position: relative;
+
+  padding: 6rem 32rem;
+
+  width: 100%;
+  height: 29.8rem;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+}
+
+footer > * {
+  max-width: 66.7vw;
+}
+
+.footerTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hoduTerms {
+  display: flex;
+  gap: 3.2rem;
+  font-size: 1.4rem;
+  color: black;
+}
+.hoduTerms li a {
+  color: black;
+}
+.hoduTerms li:not(:last-child)::after {
+  content: "|";
+  color: black;
+  position: relative;
+  left: 1.6rem;
+}
+strong {
+  font-weight: bold;
+}
+.snsList {
+  position: relative;
+  right: 0;
+  display: flex;
+  gap: 1.4rem;
+}
+.line {
+  border: 1px solid #c4c4c4;
+  width: 100%;
+}
+
+footer .business {
+  display: flex;
+  color: var(--sub-color);
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  position: relative;
+  left: 0;
+}
