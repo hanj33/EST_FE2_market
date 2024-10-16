@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>호두마켓 | 회원가입</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="./css/style-join.css" />
+  </head>
+  <body>
+    <h1>
+      <img src="assets/Logo-hodu.png" alt="호두마켓" />
+    </h1>
+    <section class="login">
+      <div class="loginSelect">
+        <button class="loginBuyer selectedBtn">구매회원가입</button>
+        <button class="loginSeller">판매회원가입</button>
+      </div>
+
+      <form class="loginInput">
+        <label for="userID">아이디</label>
+        <input type="text" id="userID" pattern="^([a-z0-9_]){6,20}$" required />
+        <button>중복확인</button>
+
+        <label for="userPW">비밀번호</label>
+        <input
+          type="password"
+          id="userPW"
+          pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm"
+          required
+        />
+        <label for="userPWre">비밀번호 재확인</label>
+        <input type="password" id="userPWre" required />
+
+        <label for="userName">이름</label>
+        <input type="text" id="userName" required />
+        <section class="userPhoneNumber">
+          <label>휴대폰번호</label>
+          <div class="phoneNumInput">
+            <div class="userPhoneNumContainer">
+              <button type="button" class="listOpen">
+                010
+                <!-- <img src="./assets/icon-down-arrow.svg" alt="" /> -->
+              </button>
+              <ul class="phoneNumList">
+                <li><button type="button">010</button></li>
+                <li><button type="button">011</button></li>
+                <li><button type="button">016</button></li>
+                <li><button type="button">017</button></li>
+                <li><button type="button">019</button></li>
+              </ul>
+            </div>
+            <input type="text" pattern="[0-9]{3,4}" maxlength="4" required />
+            <input type="text" pattern="[0-9]{4}" maxlength="4" required />
+          </div>
+        </section>
+        <section class="userHelp">
+          <button type="submit" class="joinBtn disabledBtn">가입하기</button>
+        </section>
+      </form>
+    </section>
+
+    <script src="./js/join.js"></script>
+  </body>
+</html>
