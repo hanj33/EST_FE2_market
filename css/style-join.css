@@ -138,9 +138,24 @@ label {
   font-size: 1.6rem;
 }
 
-/* 패턴 확인용 */
-input:invalid {
-  background-color: salmon;
+input:user-invalid {
+  border: #eb5757 solid 1px;
+}
+
+.IDinput {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.2rem;
+}
+.loginInput .userIDinput {
+  width: 34.6rem;
+}
+
+.loginInput .checkID {
+  margin: 0;
+
+  width: 12.2rem;
 }
 
 .loginInput button,
@@ -156,10 +171,16 @@ input:invalid {
 
   background-color: var(--main-color);
   border-radius: 0.5rem;
+
+  /* box-sizing: border-box; */
 }
 
 .userHelp button {
   background-color: #c4c4c4;
+}
+
+.userInfo {
+  margin-top: 4rem;
 }
 
 .userPhoneNumber {
@@ -209,7 +230,7 @@ input:invalid {
 
   background-color: inherit;
   color: black;
-  border: 1px solid var(--main-color);
+  border: 1px solid #c4c4c4;
 
   background: url(../assets/icon-down-arrow.svg) no-repeat right 14px center;
 }
@@ -233,6 +254,8 @@ input:invalid {
 
   overflow-y: scroll;
   background-color: white;
+
+  z-index: 100;
 
   display: none;
 }
@@ -267,8 +290,50 @@ input:invalid {
 
 .listOpen.on {
   background-image: url(../assets/icon-up-arrow.svg);
+
+  border-color: var(--main-color);
 }
 
 .listOpen.on + .phoneNumList {
   display: block;
+}
+
+.userHelp {
+  max-width: 55rem;
+  padding: 3.5rem;
+
+  position: relative;
+}
+.userHelp .agreeTermCheck {
+  background-color: inherit;
+  padding: 0;
+  margin: 0;
+  width: 0;
+
+  border-radius: 0;
+
+  float: left;
+
+  width: 1.6rem;
+  height: 1.6rem;
+  /* border: 3px solid black; */
+  background: url(../assets/check-box.svg) no-repeat center;
+}
+
+.agreeTermCheck.on {
+  background-image: url(../assets/check-fill-box.svg);
+}
+
+.userHelp p {
+  font-size: 1.6rem;
+  padding-left: 2.6rem;
+
+  color: var(--sub-color);
+}
+.userHelp .agreeTerm {
+  color: var(--sub-color);
+  font-weight: bold;
+
+  text-decoration: underline;
+  text-underline-position: under;
 }
