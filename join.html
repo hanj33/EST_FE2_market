@@ -17,7 +17,7 @@
         <button class="loginSeller">판매회원가입</button>
       </div>
 
-      <form class="loginInput" id="loginInput">
+      <form class="loginInput" id="loginInput" novalidate>
         <label for="userID">아이디</label>
         <div class="IDinput">
           <input
@@ -34,11 +34,12 @@
         <input
           type="password"
           id="userPW"
-          pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm"
+          pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
           required
         />
         <label for="userPWre">비밀번호 재확인</label>
-        <input type="password" id="userPWre" required />
+        <input type="password" id="userPWre" class="" required />
+        <span class="passwordError"></span>
 
         <label for="userName" class="userInfo">이름</label>
         <input type="text" id="userName" required />
@@ -58,8 +59,20 @@
                 <li><button type="button">019</button></li>
               </ul>
             </div>
-            <input type="text" pattern="[0-9]{3,4}" maxlength="4" required />
-            <input type="text" pattern="[0-9]{4}" maxlength="4" required />
+            <input
+              type="text"
+              pattern="[0-9]{3,4}"
+              maxlength="4"
+              required
+              class="userPhoneNumInput"
+            />
+            <input
+              type="text"
+              pattern="[0-9]{4}"
+              maxlength="4"
+              required
+              class="userPhoneNumInput"
+            />
           </div>
         </section>
       </form>

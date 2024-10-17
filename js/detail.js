@@ -8,7 +8,7 @@ const plusBtn = productCount.querySelector(".plusBtn");
 // let priceNum = buyProduct.querySelector("priceNum");
 
 const totalCountNum = buyProduct.querySelector(".totalCountNum");
-const totalPrice = buyProduct.querySelector(".totalPrice");
+const totalPriceNum = buyProduct.querySelector(".totalPriceNum");
 
 let productTotalPrice = 0; // 총 구매액
 
@@ -19,7 +19,7 @@ function minusProduct() {
 
     productTotalPrice = Number(totalCountNum.textContent) * 17500;
 
-    totalPrice.textContent = productTotalPrice.toLocaleString();
+    totalPriceNum.textContent = productTotalPrice.toLocaleString();
   }
 }
 
@@ -29,8 +29,16 @@ function plusProduct() {
 
   productTotalPrice = Number(totalCountNum.textContent) * 17500;
 
-  totalPrice.textContent = productTotalPrice.toLocaleString();
+  totalPriceNum.textContent = productTotalPrice.toLocaleString();
 }
 
 minusBtn.addEventListener("click", minusProduct);
 plusBtn.addEventListener("click", plusProduct);
+
+productCountNum.addEventListener("input", () => {
+  totalCountNum.textContent = productCountNum.value;
+
+  productTotalPrice = Number(totalCountNum.textContent) * 17500;
+
+  totalPriceNum.textContent = productTotalPrice.toLocaleString();
+});

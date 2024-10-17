@@ -119,6 +119,10 @@ form {
   font-size: 1.6rem;
 }
 
+.loginInput #userPW {
+  margin-bottom: 3.6rem;
+}
+
 .loginInput button {
   width: 48rem;
   height: 6rem;
@@ -127,7 +131,7 @@ form {
   font-weight: bold;
   font-size: 1.8rem;
 
-  margin-top: 3.6rem;
+  /* margin-top: 3.6rem; */
 
   background-color: var(--main-color);
   border-radius: 0.5rem;
@@ -149,4 +153,16 @@ form {
 
   position: relative;
   left: 1.4rem;
+}
+
+/* 에러 메시지 스타일 */
+.loginError {
+  color: #eb5757;
+  font-size: 1.6rem;
+
+  /* margin-bottom: 2.6rem; */
+  align-self: flex-start;
+}
+.loginError.none {
+  margin-bottom: 2.6rem;
 }

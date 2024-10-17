@@ -158,6 +158,17 @@ input:user-invalid {
   width: 12.2rem;
 }
 
+#userPW,
+#userPWre {
+  background: url(../assets/icon-check-off.svg) no-repeat right 1.6rem center;
+}
+#userPW:valid {
+  background: url(../assets/icon-check-on.svg) no-repeat right 1.6rem center;
+}
+#userPWre.on {
+  background: url(../assets/icon-check-on.svg) no-repeat right 1.6rem center;
+}
+
 .loginInput button,
 .userHelp button {
   width: 48rem;
@@ -233,6 +244,9 @@ input:user-invalid {
   border: 1px solid #c4c4c4;
 
   background: url(../assets/icon-down-arrow.svg) no-repeat right 14px center;
+}
+.userPhoneNumContainer button.on {
+  background: url(../assets/icon-up-arrow.svg) no-repeat right 14px center;
 }
 .userPhoneNumContainer button img {
   position: absolute;
@@ -336,4 +350,10 @@ input:user-invalid {
 
   text-decoration: underline;
   text-underline-position: under;
+}
+
+/* 에러 메시지 스타일 */
+.passwordError {
+  color: #eb5757;
+  font-size: 1.6rem;
 }
