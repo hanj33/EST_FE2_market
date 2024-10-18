@@ -186,7 +186,7 @@ input:user-invalid {
   /* box-sizing: border-box; */
 }
 
-.userHelp button {
+.userHelp button.disabledBtn {
   background-color: #c4c4c4;
 }
 
@@ -196,6 +196,13 @@ input:user-invalid {
 
 .userPhoneNumber {
   display: grid;
+}
+
+input:focus {
+  border-color: var(--main-color);
+}
+input {
+  outline: none;
 }
 
 .userPhoneNumContainer button,
@@ -353,7 +360,7 @@ input:user-invalid {
 }
 
 /* 에러 메시지 스타일 */
-.passwordError {
+span {
   color: #eb5757;
   font-size: 1.6rem;
 }
