@@ -305,6 +305,11 @@ main {
   right: 0;
 }
 
+.totalPrice {
+  position: relative;
+  top: 0.3rem;
+}
+
 .buyProduct .totalPriceNum {
   color: var(--main-color);
   font-weight: bold;
@@ -313,7 +318,7 @@ main {
   padding-right: 0.2rem;
 
   position: relative;
-  top: 0.5rem;
+  top: 0.3rem;
 }
 
 .buyItBtn {
@@ -341,7 +346,7 @@ main {
   padding-top: 14rem;
   display: flex;
 
-  padding-bottom: 36rem;
+  /* padding-bottom: 36rem; */
 }
 .productDetail button {
   width: 32rem;
@@ -356,6 +361,24 @@ main {
 .productDetail button.disabledBtn {
   color: var(--sub-color);
   border-bottom: 0.6rem solid #e0e0e0;
+}
+.productDetailContainer {
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 2.5rem;
+
+  display: flex;
+
+  max-width: 67%;
+}
+.productDetailItem {
+  display: none;
+}
+.productDetailItem.on {
+  display: block;
 }
 
 /* =========================================================== */

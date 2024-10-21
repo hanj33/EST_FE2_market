@@ -65,3 +65,94 @@ productCountNum.addEventListener("input", () => {
 
   totalPriceNum.textContent = productTotalPrice.toLocaleString();
 });
+
+const productDetail = document.querySelector(".productDetail");
+const detail = productDetail.querySelector(".detail");
+const review = productDetail.querySelector(".review");
+const qna = productDetail.querySelector(".qna");
+const recall = productDetail.querySelector(".recall");
+
+const productDetailContainer = document.querySelector(
+  ".productDetailContainer"
+);
+const productDetailDetail = productDetailContainer.querySelector(
+  ".productDetailDetail"
+);
+const productDetailReview = productDetailContainer.querySelector(
+  ".productDetailReview"
+);
+const productDetailQna =
+  productDetailContainer.querySelector(".productDetailQna");
+const productDetailRecall = productDetailContainer.querySelector(
+  ".productDetailRecall"
+);
+
+detail.addEventListener("click", () => {
+  productDetailDetail.classList.add("on");
+
+  productDetailReview.classList.remove("on");
+  productDetailQna.classList.remove("on");
+  productDetailRecall.classList.remove("on");
+
+  if (detail.classList.contains("disabledBtn")) {
+    detail.classList.remove("disabledBtn");
+    detail.classList.add("activeBtn");
+
+    review.classList.add("disabledBtn");
+    qna.classList.add("disabledBtn");
+    recall.classList.add("disabledBtn");
+  }
+});
+
+review.addEventListener("click", () => {
+  productDetailDetail.classList.remove("on");
+
+  productDetailReview.classList.add("on");
+
+  productDetailQna.classList.remove("on");
+  productDetailRecall.classList.remove("on");
+
+  if (review.classList.contains("disabledBtn")) {
+    review.classList.remove("disabledBtn");
+    review.classList.add("activeBtn");
+
+    detail.classList.add("disabledBtn");
+    qna.classList.add("disabledBtn");
+    recall.classList.add("disabledBtn");
+  }
+});
+
+qna.addEventListener("click", () => {
+  productDetailDetail.classList.remove("on");
+  productDetailReview.classList.remove("on");
+
+  productDetailQna.classList.add("on");
+
+  productDetailRecall.classList.remove("on");
+
+  if (qna.classList.contains("disabledBtn")) {
+    qna.classList.remove("disabledBtn");
+    qna.classList.add("activeBtn");
+
+    detail.classList.add("disabledBtn");
+    review.classList.add("disabledBtn");
+    recall.classList.add("disabledBtn");
+  }
+});
+
+recall.addEventListener("click", () => {
+  productDetailDetail.classList.remove("on");
+  productDetailReview.classList.remove("on");
+  productDetailQna.classList.remove("on");
+
+  productDetailRecall.classList.add("on");
+
+  if (recall.classList.contains("disabledBtn")) {
+    recall.classList.remove("disabledBtn");
+    recall.classList.add("activeBtn");
+
+    detail.classList.add("disabledBtn");
+    review.classList.add("disabledBtn");
+    qna.classList.add("disabledBtn");
+  }
+});

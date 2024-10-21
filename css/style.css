@@ -166,12 +166,16 @@ main {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 7rem 7.8rem;
   padding-top: 8rem;
+  /* max-width: 66.7%; */
+}
+.item > * {
   max-width: 66.7%;
 }
 .itemProduct {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  width: 100%;
 }
 .itemImage {
   width: 38rem;

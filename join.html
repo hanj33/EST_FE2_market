@@ -8,9 +8,15 @@
     <link rel="stylesheet" href="./css/style-join.css" />
   </head>
   <body>
-    <h1>
+    <!-- <h1>
       <img src="assets/Logo-hodu.png" alt="호두마켓" />
+    </h1> -->
+    <h1>
+      <a href="index.html">
+        <img src="assets/Logo-hodu.png" alt="호두마켓" />
+      </a>
     </h1>
+
     <section class="login">
       <div class="loginSelect">
         <button class="loginBuyer selectedBtn">구매회원가입</button>
@@ -46,6 +52,8 @@
 
         <label for="userName" class="userInfo">이름</label>
         <input type="text" id="userName" required />
+        <span class="userNameError"></span>
+
         <section class="userPhoneNumber">
           <label>휴대폰번호</label>
           <div class="phoneNumInput">
@@ -67,14 +75,14 @@
               pattern="[0-9]{3,4}"
               maxlength="4"
               required
-              class="userPhoneNumInput"
+              class="userPhoneNumInput userPhoneNum1"
             />
             <input
               type="text"
               pattern="[0-9]{4}"
               maxlength="4"
               required
-              class="userPhoneNumInput"
+              class="userPhoneNumInput userPhoneNum2"
             />
           </div>
         </section>
